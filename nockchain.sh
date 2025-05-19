@@ -16,8 +16,19 @@ make build
 # 安装钱包
 make install-nockchain-wallet
 
-# 将 target/release 目录添加到 PATH
-export PATH="$PATH:$(pwd)/target/release"
+NOCKCHAIN_PATH="$HOME/nockchain/target/release"
+
+# 检查是否已添加 PATH
+if ! grep -Fx "export PATH=\"\$PATH:$NOCKCHAIN_PATH\"" "$HOME/.zshrc" > /dev/null; then
+  echo "添加 PATH 到 .zshrc..."
+  echo "export PATH=\"\$PATH:$NOCKCHAIN_PATH\"" >> "$HOME/.zshrc"
+else
+  echo "PATH 已存在于 .zshrc，无需重复添加。"
+fi
+
+# 应用 .zshrc 更改
+echo "应用 .zshrc 更改..."
+source "$HOME/.zshrc"
 
 # 尝试生成种子短语（假设命令为 generate-seed）
 echo "尝试生成种子短语..."
