@@ -30,9 +30,9 @@ fi
 echo "应用 .zshrc 更改..."
 source "$HOME/.zshrc"
 
-# 尝试生成种子短语（假设命令为 generate-seed）
-echo "尝试生成种子短语..."
-nockchain-wallet keygen
+# 生成种子短语
+echo "尝试生成种子短语到wallet.txt中"
+nockchain-wallet keygen > wallet.txt
 
 # 安装nockchain
 make install-nockchain
