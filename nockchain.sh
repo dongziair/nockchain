@@ -36,5 +36,9 @@ nockchain-wallet keygen > wallet.txt
 
 # 安装nockchain
 make install-nockchain
-make run-nockchain-leader
-make run-nockchain-follower
+
+# 创建并运行run-nockchain-leader会话
+screen -dmS leader_session bash -c "make run-nockchain-leader; exec bash"
+
+# 创建并运行run-nockchain-follower会话
+screen -dmS follower_session bash -c "make run-nockchain-follower; exec bash"
