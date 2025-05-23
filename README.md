@@ -4,5 +4,5 @@
 ~~wget -O nockchain.sh https://raw.githubusercontent.com/dongziair/nockchain/refs/heads/main/nockchain.sh && chmod +x nockchain.sh && ./nockchain.sh~~
 
 ## 多开脚本
-wget -o morestart.sh https://raw.githubusercontent.com/dongziair/nockchain/refs/heads/main/morestart.sh && chmod +x morestart.sh && ./morestart.sh
+wget -O morestart.sh https://raw.githubusercontent.com/dongziair/nockchain/refs/heads/main/morestart.sh && chmod +x morestart.sh && ./morestart.sh
 
